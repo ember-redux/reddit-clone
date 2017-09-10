@@ -1,7 +1,21 @@
-{{#ui-layout class="container"}}
+{{#ui-layout class="container" as |posts filter filterWith|}}
   <table class="table table-border">
     <tbody>
-      <tr><td></td></tr>
+      {{#if filter}}
+        <tr>
+          <td class="active-filter">Showing posts for => {{filter}}</td>
+        </tr>
+      {{/if}}
+      {{#each-in posts as |key post|}}
+      <tr>
+        <td>
+          <div class="title">{{post.title}}</div>
+          <span class="author">{{post.author}}</span>
+          <button onclick={{action filterWith post.author}}
+            class="pull-right filter {{unless (is-equal post.author filter) "inactive"}}"></button>
+        </td>
+      </tr>
+      {{/each-in}}
     </tbody>
   </table>
 {{/ui-layout}}

@@ -1,4 +1,17 @@
-import Ember from 'ember';
+import { connect } from 'ember-redux';
+import { filterPosts } from '../reducers/posts';
 
-export default Ember.Component.extend({
-});
+const stateToComputed = state => {
+  return {
+    posts: filterPosts(state),
+    filter: state.posts.filter
+  }
+}
+
+const dispatchToActions = dispatch => {
+  return {
+    filterWith: (author) => dispatch({type: 'POSTS:FILTER_POSTS', author})
+  }
+}
+
+export default connect(stateToComputed, dispatchToActions)();
