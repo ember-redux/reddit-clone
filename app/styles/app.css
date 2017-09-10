@@ -1,0 +1,72 @@
+html{
+  margin:0;
+  padding:0;
+}
+
+div {
+  border-width: 3px;
+  border-color: #6F5230;
+}
+
+.title, .author {
+  width: 90%;
+}
+
+.title {
+  text-align: left;
+  font-size: 160%;
+  padding-bottom: 4px;
+}
+
+.filter {
+  border: 0;
+  width: 50px;
+  height: 50px;
+  margin-top: -30px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEKUlEQVRoQ+1Z7VHjMBB96xQAVHBcBQcFHHYqQFQAVABUQK6CgwoIFSAqiM0VQKgAqOCgALI3K0uxk4udWBIfw6B/nljOPu3qvf0gfJJFnwQHvoC0eZJHagsJUgDrYGyZdwljEI3xwgX19VPsSIjqES7UERjHIGw2Gsp4QoIT2tHDmGCiAOGRWgdhBLKnz3gEQQN4Mp6QVXomA4yn5HmIHi7pp85jAAoGYkHcGi8w7tDDcZtxfKOOwfg9NZ6hwTgMDbdwIIU6AyAhdQdGtopBPFKb6CHDBGcgrIGRU6b7IZ4JAmIMSnBvDJjgO/X1QxdjzH5DAlhDgn5ImIUBqcLkklJ90AWEe5cLNQBwCuCaUq18vlGSYsDiQsmF3gXh0JeFLFXfgvFEmd7wNScUiDBOGhoWXCg2p5pqb3u8NxoGzZWwlYhfUHx/BCByUX9ggm3q61IvPNb7AylUcGhNmY/xTJle9zgHmwH57pTQqi77Hu1oufidF/9RoicjAAWlWpTfa4XdkYo6f1GqhUY7rxr9nlOqjzt/wG4IAxLhNNmFJ8Hbq+E6cqMOwLjw1QCTpyX4a4P8HYE4+iWTlkvO1Xl9FGU3QuaTZznEH+Wyl/QbEN/swhPwztdi3pExEpx3zbcMiAlOTS0TkK8FA5EPTFmHMaZMb3e5JE7RQzUkChADJldS0q5hgo1VCiuzp2xQSNb7SJlurvFXPJkgHZle2EJJI2EfwMrCyK6yBIKE0NkQB4gTRumQsKkUW9s9ts6/B2E9hPHqzooCZO6uDCnTh20Rwbm6AkGqwaD86nWAVOmKtHoWdkasJy4siCD9mT+oaB6xXikF0jzgAUQDTPjaPCe0C+bBtHnHuKNMl13ICOt1gEhrSAquRYvxbBguYlhFo98ae01rbyt20j51gAoQhiA8mPrDQ3faHBfNI1NdWNJEmMl4A0vk6JfdJH4vECaSUnWpLkwrS8YYPZyENOai6IjxAuEIhHpzbqko1lJ3RwxDMM5DGhheocXF3j6YD0Cmu+6WsNNuyVDN7aFa2i5vVntKpstBNKT06rIrka0MxMa2m3+U3Y6SgYbSjJa+by3tKMcGtVNe4D3jOdtFkQ69HIywmeyV3O0ME+OllYZCKwGxAxzRAAfgEQkGeIGe/6MZMM3H+l/4mYPqQWFiBkUl05WABpTq82UeagVilVgusQuhQgAsu5y1U85qRom25M57bYbZ8JOujBsK5WDstXmnEcjMFEpCKMGBb+9q2Wk2/c43Sjwk2iMzlDEY/SYwzUCqAc6jHeB0mn34Gj+/z85QchC+tVH7QiAzA5zABnUMQDNM1zBQWgykKnqChi8xQNTSn3IW0yC4TUBcd8R7gBMThCGwqtuysIZpAlKl47EtivC9RQOhzw0kwqG9+SdWUvY3t8rjD7+AeBzaq275B4+7HVH9AitUAAAAAElFTkSuQmCC") no-repeat;
+}
+
+table {
+  border: 1px solid #ff9200!important;
+  border-top: 0!important;
+  border-left: 0!important;
+  border-right: 0!important;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+  border-top: 0;
+  padding: 11px;
+}
+
+.table-border>thead>tr>th, .table-border>tbody>tr>th, .table-border>tfoot>tr>th, .table-border>thead>tr>td, .table-border>tbody>tr>td, .table-border>tfoot>tr>td {
+  border-bottom: 1px solid #eee!important;
+}
+
+td a {
+  display:block;
+  width:100%;
+}
+
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.author {
+  text-align: center;
+  color: #777!important;
+  font-weight: normal!important;
+}
+
+.active-filter {
+  color: #4297FF;
+  font-size: 130%;
+}
+
+.filter:focus {
+  outline: none;
+}
+
+.inactive {
+  opacity: 0.4;
+}
