@@ -1,4 +1,5 @@
-import _ from 'lodash';
+import keyBy from 'lodash/keyBy';
+import omitBy from 'lodash/omitBy';
 import reselect from 'reselect';
 
 const { createSelector } = reselect;
@@ -12,7 +13,7 @@ export default function posts(state, action) {
   switch (action.type) {
     case 'POSTS:FETCH_API': {
       const children = action.payload.data.children.map(child => child.data);
-      const all = _.keyBy(children, post => post.id);
+      const all = keyBy(children, post => post.id);
       return {
         ...state,
         all: {...state.all, ...all}
@@ -45,7 +46,7 @@ export const filterPosts = createSelector(
   all,
   filter,
   (all, filter) => {
-    return _.omitBy(all, post => {
+    return omitBy(all, post => {
       return filter === undefined ? false : post.author !== filter;
     });
   }
